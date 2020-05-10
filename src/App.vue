@@ -1,14 +1,12 @@
 <template>
   <div id="app">
     <Home/>
-    <Button/>
     <HacktivismFooter />
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue';
-import Button from './components/Button.vue';
 import HacktivismFooter from './components/HacktivismFooter.vue';
 
 export default {
@@ -16,7 +14,6 @@ export default {
   components: {
     Home,
     HacktivismFooter,
-    Button,
   }
 }
 </script>

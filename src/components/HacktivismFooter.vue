@@ -1,7 +1,7 @@
 <template>
 
 <footer>
-    <section class="footer-container-upper">
+    <section class="footer-container-upper showFooterContent">
 
         <section>
             <h3>About Us</h3>
@@ -29,7 +29,7 @@
 
     </section>
 
-    <section class="footer-container-bottom">
+    <section class="footer-container-bottom showFooterContent">
 
         <section>
             <font-awesome-icon class="footerIcons" :icon="{ prefix: 'fab', iconName: 'twitter-square' }"/>
@@ -51,14 +51,19 @@
 
     </section>
 
+    <Button class="showBtn"/>
     
 </footer>
     
 </template>
 
 <script>
+import Button from './Button.vue';
 export default {
   name: 'HacktivismFooter',
+  components: {
+Button 
+  },
   props: {
     msg: String
   }
@@ -117,48 +122,15 @@ footer a, footer b {
     width: 100%;
     padding: 6px 0;
 }
-@media (max-width: 400px) {
-    footer {
-        padding: 0;
-        margin:  0;
+    .showBtn {
+        display: none;
     }
-    .footer-container-upper {
+@media (max-width: 400px) {
+    .showFooterContent {
         display: none;
-        }
-    .footer-container-bottom {
-padding: 3%;
-    padding-top: 0;
-    border-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    max-width: 1150px;
-    width: 100%;
-    margin: 0 auto;
-    background: #1e3059;
-}
-    .footer-container-bottom section:nth-child(1), .footer-container-bottom section:nth-child(2) {
-        display: none;
-        }
-    .footer-container-bottom section:nth-child(3){
-    background: #ff3265;
-    margin: auto;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 4px auto;
-    padding: 1.5em 1.8em;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-    font-weight: 700;
-    border-radius: 3rem;
-    border: solid;
-    width: 85%;
-    box-shadow: 5px 10px #ff3265;      
+    }
+    .showBtn {
+        display: block
     }
 }
 
