@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <a class='btn btn-white' href="#">Hacktivism</a>
+    <a class='btn btn-white .btn-animated' href="#">Hacktivism</a>
   </div> 
 </template>
 
@@ -13,6 +13,19 @@
 </script>
 
 <style>
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
 .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -21,6 +34,7 @@
     border-radius: 100px;
     /* not specified */
     transition: all .2s;
+    position: relative;
 }
 
 .btn:hover {
@@ -37,5 +51,32 @@
 .btn-white {
     background-color: #fff;
     color: #777;
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    /* Apply 0% styles */
+    animation-fill-mode: backwards;
 }
 </style>
