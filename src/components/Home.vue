@@ -1,14 +1,16 @@
 <template>
   <div class="container">
-    <h3>HomePage</h3>
+   <HeroBanner/>
   </div> 
 </template>
 
 <script>
-
+import HeroBanner from './HeroBanner.vue';
   export default {
-    name: 'Home'
-
+    name: 'Home',
+    components: {
+    HeroBanner
+    }
   }
 </script>
 
