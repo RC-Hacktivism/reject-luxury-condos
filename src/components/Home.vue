@@ -10,6 +10,9 @@ import HeroBanner from './HeroBanner.vue';
     name: 'Home',
     components: {
     HeroBanner
+    }, 
+    props: {
+      text: ""
     }
   }
 </script>
