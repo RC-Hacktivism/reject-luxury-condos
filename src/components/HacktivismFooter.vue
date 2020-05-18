@@ -50,19 +50,15 @@
         </section>
 
     </section>
-
-    <Button class="showBtn"/>
     
 </footer>
     
 </template>
 
 <script>
-import Button from './Button.vue';
 export default {
   name: 'HacktivismFooter',
   components: {
-Button 
   },
   props: {
     msg: String

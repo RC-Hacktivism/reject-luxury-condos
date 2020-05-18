@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <Home/>
+    <HomePageContentRow/>
+    <HomePageContentRow/>
+    <HomePageContentRow/>
     <HacktivismFooter />
   </div>
 </template>
@@ -8,12 +11,14 @@
 <script>
 import Home from './components/Home.vue';
 import HacktivismFooter from './components/HacktivismFooter.vue';
+import HomePageContentRow from './components/HomePageContentRow.vue'
 
 export default {
   name: 'App',
   components: {
     Home,
     HacktivismFooter,
+    HomePageContentRow
   }
 }
 </script>

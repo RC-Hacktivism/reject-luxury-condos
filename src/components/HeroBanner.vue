@@ -88,21 +88,24 @@ margin-bottom: 60px;
 
 .heading-primary-main {
     display: block;
-    font-size: 60px;
+    font-size: 35px;
     font-weight: 400;
-    letter-spacing: 35px;
-
+    letter-spacing: 5px;
+    -webkit-animation-name: moveInLeft;
     animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
 
 }
 
 .heading-primary-sub {
-    display: block;
+     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 13.4px;
+    -webkit-animation: moveInRight 1s ease-out;
     animation: moveInRight 1s ease-out;
 }
 

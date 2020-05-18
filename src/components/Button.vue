@@ -50,7 +50,8 @@
 
 .btn-white {
     background-color: #fff;
-    color: #777;
+    color: white;
+    width: 100%; 
 }
 .btn::after {
     content: "";
@@ -78,5 +79,8 @@
     animation: moveInBottom .5s ease-out .75s;
     /* Apply 0% styles */
     animation-fill-mode: backwards;
+}
+a {
+    background-color: #FF4000 !important;
 }
 </style>
