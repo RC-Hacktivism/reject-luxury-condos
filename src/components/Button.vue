@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <a class='btn btn-white .btn-animated' href="#">Hacktivism</a>
-  </div> 
+  </div>
 </template>
 
 <script>
@@ -13,6 +13,12 @@
 </script>
 
 <style>
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 @keyframes moveInBottom {
     0% {

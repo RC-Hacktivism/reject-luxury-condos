@@ -137,4 +137,77 @@ margin-bottom: 60px;
         transform: translate(0px);
     }
 }
+
+@media (max-width: 400px) {
+body {
+    font-family: "Lato";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 5px;
+}
+    .header {
+    height: 50vh;
+    background-image: linear-gradient(to right bottom, 
+        rgba(76, 23, 111, 0.801),
+        rgba(255, 120, 111, 0.801)),
+    url('../assets/osman-rana-xJueGJJHnWs-unsplash.jpg');
+    background-size: cover;
+    background-position: top;
+/* https://bennettfeely.com/clippy/ */
+    /* clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+    /* defined for children that will use abs path */
+    position: relative;
+}
+
+    .logo-box {
+position: absolute;
+top: 20px;
+left: 20px;
+}
+
+.logo {
+height: 35px;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* shift element within its position */
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.heading-primary {
+color: #fff;
+text-transform: uppercase;
+/* hide back part of el, stop raising of animation */
+backface-visibility: hidden;
+margin-bottom: 60px;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 6px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 10.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+}
 </style>

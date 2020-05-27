@@ -132,6 +132,11 @@ footer a, footer b {
     .showBtn {
         display: block
     }
+
+    footer {
+        padding: 10px 0;
+        margin: 0 25px;
+    }
 }
 
 </style>

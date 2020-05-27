@@ -52,6 +52,11 @@ import HeroBanner from './HeroBanner.vue';
 </script>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
   h3 {
     margin-bottom: 5%;
   }
