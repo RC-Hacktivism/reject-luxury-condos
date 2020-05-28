@@ -1,24 +1,36 @@
 <template>
   <div id="app">
     <Home/>
-    <HomePageContentRow/>
-    <HomePageContentRow/>
-    <HomePageContentRow/>
-    <HacktivismFooter />
+   <HomePageContentRow v-for="article in articles" :key = "article">
+    <p>{{article.title}}</p>
+    </HomePageContentRow>
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue';
-import HacktivismFooter from './components/HacktivismFooter.vue';
+// import HacktivismFooter from './components/HacktivismFooter.vue';
 import HomePageContentRow from './components/HomePageContentRow.vue'
+// import rowContent from './modules/rowContent.json'
 
 export default {
   name: 'App',
   components: {
     Home,
-    HacktivismFooter,
+    // HacktivismFooter,
     HomePageContentRow
+  }, 
+  data: ()=> {
+    return{
+        articles: [
+        {
+            title: 'I SCREAM INTO THE VOIIIIIDOIDOIDOIOIDOID'
+        }
+    ]
+    }
+},
+  props: {
+    article: undefined
   }
 }
 </script>

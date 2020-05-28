@@ -1,0 +1,19 @@
+{
+    "content":[
+       {
+           "issueOne": {
+            "blockQuote": "Relevant Quote", 
+            "details":"Paragraphs"
+           }, 
+           "issueTwo": {
+            "blockQuote": "Another Relevant Quote", 
+            "details":"Paragraphs"
+           }, 
+           "issueThree": {
+            "blockQuote": "Third Relevant Quote", 
+            "details":"Paragraphs"
+           } 
+       } 
+
+    ]
+}

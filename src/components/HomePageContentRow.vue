@@ -3,12 +3,12 @@
 
     <div class="ContentRow">
      
-      <div class="blockQuote">
+      <div class="blockQuote" v-for="cell in rowContent" :key="cell">
         <img src="https://ssir.org/images/blog/iStockmachinelearning592x333.jpg" alt="">
-        <p>"Lorem ipsum sum yodel yodel yodel Lorem ipsum dolor sit amet, sodal"</p>
+        <p>{{cell.blockQuote}}</p>
       </div>
 
-      <p>"Lorem ipsum dolor sit amet, sodales amet felis tincidunt ac, in tincidunt in nonummy sed. Purus cras massa, suspendisse et in diam, tortor ut amet sed sagittis, tempor vitae eleifend at dui. At viverra et nunc ultricies."</p>
+      <p>{{cell.details}}</p>
       <Button/>
     </div>
     
@@ -17,12 +17,37 @@
 
 <script>
 import Button from './Button.vue';
+// import rowContent from './../modules/rowContent.json';
   export default {
     name: 'HomePageContentRow',
     components: {
     Button
-    }
-  }
+    }, 
+    props: {
+      // rowContent = rowContent
+    },
+    data: function () {
+      return{
+       rowContent: 
+        [
+           {
+           "issueOne": {
+            "blockQuote": "Relevant Quote", 
+            "details":"Paragraphs"
+           }, 
+           "issueTwo": {
+            "blockQuote": "Another Relevant Quote", 
+            "details":"Paragraphs"
+           }, 
+           "issueThree": {
+            "blockQuote": "Third Relevant Quote", 
+            "details":"Paragraphs"
+           } 
+           }
+        ]
+      }
+      }
+      }
 </script>
 
 <style>

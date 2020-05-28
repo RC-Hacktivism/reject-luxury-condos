@@ -50,8 +50,7 @@
 
 .btn-white {
     background-color: #fff;
-    color: white;
-    width: 100%; 
+    color: white; 
 }
 .btn::after {
     content: "";
